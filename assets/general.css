@@ -25,6 +25,14 @@ a {
 	src: url(https://digestivdogs.github.io/assets/contemporary.ttf) format("truetype");
 }
 
-html {
+p {
+	font-family: "My Custom Font";
+}
+
+h1 {
+	font-family: "My Custom Font";
+}
+
+h3 {
 	font-family: "My Custom Font";
 }
