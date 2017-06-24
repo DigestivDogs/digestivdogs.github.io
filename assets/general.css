@@ -8,7 +8,7 @@ a {
 	font-family: "My Custom Font";
 }
 
-button {
+.button {
 	background-color: #000000;
 	border: none;
 	color: white;
