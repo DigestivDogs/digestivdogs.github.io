@@ -1,15 +1,47 @@
-# digestivdogs.github.io
+# Welcome to [digestivdogs.github.io](https://digestivdogs.github.io/)
 
-Our website. 'Nuff said.
+## Q&A
 
-## Who are we?
+* * *
 
-We are 2 coding addicts who want to share their work with the world!
+### What CSS Framework do you use for this website?
 
-## How can you acsess this site?
+[mini.css](minicss.org)
 
-You can use digestivdogs.github.io [link](https://digestivdogs.github.io/)
 
-## What CSS framework are you using for this website?
+### Who are we?
 
-mini.css
+We are a group of two coders (alias [DogeyDogs](https://www.youtube.com/channel/UCprdj-M3Pld-9Pg_Ln_FpfA) and [DigestivBiscuit](https://www.youtube.com/channel/UCR2v8z3MA9nbZrIkwp38pRA)) which together makes [DigestivDogs](https://www.youtube.com/channel/UCrbkP7RQIMVXxgzneVYu-KA)!
+
+
+### What do we code in?
+
+We both code in different coding languages,
+
+
+#### DogeyDogs likes to code in:
+
+*   JavaScript
+*   C#
+*   HTML
+
+AND:
+
+*   Batch (if you count that as a coding languages
+
+
+#### DigestivBiscuit likes to code in:
+
+*   C#
+
+That is it...
+
+### Why did we start DigestivDogs?
+
+We started DigestivDogs to collaborate, we met eachover on Xbox and we found out we both liked computers and we were like,
+"Hey, we should collaborate!"
+And here we are DigestivDogs is open, we are making games and working on the website.
+
+### What is the website link?
+
+The name of this repository, [digestivdogs.github.io](https://digestivdogs.github.io/)
