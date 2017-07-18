@@ -1,0 +1,165 @@
+<html>
+	<head>
+		<title>DigestivDogs - Java Quiz Template</title>
+		<link href="assets/mini.css" rel="stylesheet" />
+		<link href="assets/general.css" rel="stylesheet" />
+		<link href="assets/prism.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon" />
+	</head>
+<body>
+	<header class="sticky row">
+		<div class="col-sm12 col-md-10 col-md-offset-1">
+			<a href="index.html" class="logo">DigestivDogs</a>
+			<a href="projects.html" class="button">Projects</a>
+			<a href="cats.html" class="button">CATS!</a>
+			<a href="dogs.html" class="button">DOGS!</a>
+			<a href="social.html" class="button">Social</a>
+			<a href="coding-tutorials.html" class="button">Coding Tutorials</a>
+			<a href="redstone-tutorials.html" class="button">Redstone Tutorials</a>
+			<a href="about.html" class="button">About</a>
+			<a href="incredimusic.html" class="button">Incredibox</a>
+			<a href="templates.html" class="button">Templates</a>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-sm-12 col-md-10 col-md-offset-1">
+			<br/>
+		    <h1>Java Quiz Template</h1>
+			<hr/>
+			<br/>
+			<br/>
+			<pre>
+				<code class="language-java">
+import java.util.Scanner;
+					
+public class Quiz {
+						
+	public static int score = 0;
+	
+	static Scanner scanner = new Scanner(System.in0;
+	
+	public static void main(String [] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("What would you like to do?\n1)Start\n2)Exit\n");
+		int answer = scanner.nextInt();
+		if (answer == 1) {
+			question1();
+		}
+		if (answer == 2) {
+			System.exit(0);
+		}
+		
+	}
+	
+	private static void question1() {
+	
+		clear();
+		System.out.println("Question 1:\nExample Question?\n1)Correct Answer\n2)Wrong Answer");
+		int answer = scanner.nextInt();
+	
+		if (answer == 1) {
+			System.out.println("\nYou got it correct! The answer is Correct Answer!");
+			if (score < 0) {
+				(Quiz.score) = 0;
+			}
+		
+			(Quiz.score) = score + 1;
+			System.out.println("Your current score is: " + score);
+			pressKey();
+			question2();
+		}
+		if (answer == 2) {
+			System.out.println("\nYou got it wrong! Try again!");
+			(Quiz.score) = score - 1;
+			if (score < 0) {
+				(Quiz.score) = 0;
+			}
+		
+			System.out.println("Your current score is: " + score);
+			pressKey();
+			question1();
+		}
+		else {
+			System.out.println("\nThat is an invalid operation! Try again!");
+			if (score < 0) {
+				(Quiz.score) = 0;
+			}
+		
+			System.out.println("Your current score is: " + score);
+			pressKey();
+			question1();
+		}
+	}
+	
+	private static void question2() {
+		
+		clear();
+		System.out.println("Question 2:\nWhat year was this quiz made?");
+		int answer = scanner.nextInt();
+		
+		if (answer == 2017) {
+			System.out.println("\nYou got it correct! The answer is 2017!");
+			if (score < 0) {
+				(Quiz.score) = 0;
+			}
+			
+			(Quiz.score) = score + 1;
+			System.out.println("Your current score is: " + score);
+			pressKey();
+			end();
+		}
+		else {
+			System.out.println("\nYou got it wrong! Try again!");
+			(Quiz.score) = score - 1;
+			if (score < 0) {
+				(Quiz.score) = 0;
+			}
+			
+			System.out.println("Your current score is: " + score);
+			pressKey();
+			question2();
+		}
+		
+	}
+	
+	private static void end() {
+		
+		clear();
+		System.out.println("Well Done! You made it to the end!");
+		System.out.println("Your final score was: " + score);
+		pressKey();
+		System.exit(0)
+	}
+	
+	private static void pressKey() {
+		
+		System.out.println("Press any key to continue...");
+		try {
+			System.in.read();
+		}
+		catch(Exception e) {
+			
+		}
+		
+	}
+	
+	private static void clear() {
+		
+		System.out.println("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+	}
+	
+}
+				</code>
+			</pre>
+		</div>
+	</div>
+	<footer class="row">
+		<div class="col-sm-12 col-md-10 col-md-offset-1">
+			Copyright &copy; <a href="https://www.youtube.com/channel/UCrbkP7RQIMVXxgzneVYu-KA">DigestivDogs</a> 2017
+		</div>
+	</footer>
+	
+	<script src="assets/prism.js"></script>
+</body>
+</html>

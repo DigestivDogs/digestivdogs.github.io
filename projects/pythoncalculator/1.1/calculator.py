@@ -1,45 +1,3 @@
-<html>
-	<head>
-		<title>DigestivDogs - Python Calculator - Home</title>
-		<link href="assets/mini.css" rel="stylesheet" />
-		<link href="assets/general.css" rel="stylesheet" />
-		<link href="assets/prism.css" rel="stylesheet" />
-		<link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon" />
-	</head>
-<body>
-	<header class="sticky row">
-		<div class="col-sm12 col-md-10 col-md-offset-1">
-			<a href="index.html" class="logo">DigestivDogs</a>
-			<a href="projects.html" class="button">Projects</a>
-			<a href="cats.html" class="button">CATS!</a>
-			<a href="dogs.html" class="button">DOGS!</a>
-			<a href="social.html" class="button">Social</a>
-			<a href="coding-tutorials.html" class="button">Coding Tutorials</a>
-			<a href="redstone-tutorials.html" class="button">Redstone Tutorials</a>
-			<a href="about.html" class="button">About</a>
-			<a href="incredimusic.html" class="button">Incredibox</a>
-			<a href="templates.html" class="button">Templates</a>
-		</div>
-	</header>
-	<div class="row">
-		<div class="col-sm-12 col-md-10 col-md-offset-1">
-				<h1 align="center">Python Calculator</h1>
-				<br/>
-				<i>by DogeyDogs</i>
-				<br/>
-				<i>requires Python <strong>2</strong></i>
-				<hr/>
-				<p align="center"><a class="button" href="projects/pythoncalculator/1.1/calculator.py" download>Download the Python Calculator</a><img src="assets/pythoncalculator.jpg">
-				</p>
-				<p align="center"><a class="button" href="python-calculator-olderversions.html">Older Versions</a>
-				</p>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<h3 align="center">Source Code:</h3>
-				<pre>
-					<code class="language-python">
 from Tkinter import *
 import parser
 
@@ -185,16 +143,3 @@ square = Button(mainwindow, text = "^2", command = lambda: get_operation("**2"),
 square.grid(row = 5, column = 5)
 
 mainwindow.mainloop()
-					</code>
-				</pre>
-		</div>
-	</div>
-	<footer class="row">
-		<div class="col-sm-12 col-md-10 col-md-offset-1">
-			Copyright &copy; <a href="https://www.youtube.com/channel/UCrbkP7RQIMVXxgzneVYu-KA">DigestivDogs</a> 2017<br/>
-		</div>
-	</footer>
-	
-	<script src="assets/prism.js"></script>
-</body>
-</html>
