@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<title>DigestivDogs - C# Hangman</title>
+		<link href="assets/mini.css" rel="stylesheet" />
+		<link href="assets/general.css" rel="stylesheet" />
+		<link href="assets/prism.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon" />
+	</head>
+<body>
+	<header class="sticky row">
+		<div class="col-sm12 col-md-10 col-md-offset-1">
+			<a href="index.html" class="logo">DigestivDogs</a>
+			<a href="projects.html" class="button">Projects</a>
+		    <a href="cats.html" class="button">CATS!</a>
+			<a href="dogs.html" class="button">DOGS!</a>
+			<a href="social.html" class="button">Social</a>
+			<a href="coding-tutorials.html" class="button">Coding Tutorials</a>
+			<a href="redstone-tutorials.html" class="button">Redstone Tutorials</a>
+			<a href="about.html" class="button">About</a>
+			<a href="incredimusic.html" class="button">Incredibox</a>
+			<a href="templates.html" class="button">Templates</a>
+		</div>
+	</header>
+	<div class="row">
+		<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<h1 align="center">C# Hangman</h1>
+				<br/>
+				<i>by DogeyDogs</i>
+				<hr/>
+				<p align="center"><a class="button" href="projects/csharphangman/1.0/hangman.exe" download>Download C# Calculator</a>
+				</p>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<h3 align="center">Source Code:</h3>
+				<pre>
+					<code class="language-csharp">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Hangman
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Random random = new Random((int)DateTime.Now.Ticks);
+
+			string[] wordBank = { "Blue", "Black", "Yellow", "Orange", "Green", "Purple", "Potato", "Tomato", "Time", "Clock", "Violet", "Flowers" };
+
+			string wordToGuess = wordBank[random.Next(0, wordBank.Length)];
+			string wordToGuessUppercase = wordToGuess.ToUpper();
+
+			StringBuilder displayToPlayer = new StringBuilder(wordToGuess.Length);
+			for (int i = 0; i < wordToGuess.Length; i++)
+				displayToPlayer.Append('_');
+
+			List<char> correctGuesses = new List<char>();
+			List<char> incorrectGuesses = new List<char>();
+
+			int lives = 5;
+			bool won = false;
+			int lettersRevealed = 0;
+
+			string input;
+			char guess;
+
+			while (!won && lives > 0)
+			{
+				Console.Write("Guess a letter: ");
+
+				input = Console.ReadLine().ToUpper();
+				guess = input[0];
+
+				if (correctGuesses.Contains(guess))
+				{
+					Console.WriteLine("You've already tried '{0}', and it was correct!", guess);
+					continue;
+				}
+				else if (incorrectGuesses.Contains(guess))
+				{
+					Console.WriteLine("You've already tried '{0}', and it was wrong!", guess);
+					continue;
+				}
+
+				if (wordToGuessUppercase.Contains(guess))
+				{
+					correctGuesses.Add(guess);
+
+					for (int i = 0; i < wordToGuess.Length; i++)
+					{
+						if (wordToGuessUppercase[i] == guess)
+						{
+							displayToPlayer[i] = wordToGuess[i];
+							lettersRevealed++;
+						}
+					}
+
+					if (lettersRevealed == wordToGuess.Length)
+						won = true;
+				}
+				else
+				{
+					incorrectGuesses.Add(guess);
+
+					Console.WriteLine("Nope, there's no '{0}' in it!", guess);
+					lives--;
+				}
+
+				Console.WriteLine(displayToPlayer.ToString());
+			}
+
+			if (won)
+				Console.WriteLine("You won!");
+			else
+				Console.WriteLine("You lost! It was '{0}'", wordToGuess);
+
+			Console.Clear();
+			Console.Write("Press ENTER to exit...");
+			Console.ReadLine();
+		}
+	}
+}
+					</code>
+				</pre>
+		</div>
+	</div>
+	<footer class="row">
+		<div class="col-sm-12 col-md-10 col-md-offset-1">
+			Copyright &copy; <a href="https://www.youtube.com/channel/UCrbkP7RQIMVXxgzneVYu-KA">DigestivDogs</a> 2017<br/>
+		</div>
+	</footer>
+
+	<script src="assets/prism.js"></script>
+</body>
+</html>
